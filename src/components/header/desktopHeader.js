@@ -39,23 +39,23 @@ const DesktopHeader = ({ siteTitle }) => (
       </div>
       <nav>
         <b style={styles.b}>
-          <Link to="/" style={styles.link}>
+          <Link to="/about" style={styles.link}>
             About
           </Link>
         </b>
         <b style={styles.b}>
-          <Link to="/" style={styles.link}>
-            Our Expertise
+          <Link to="/expertise" style={styles.link}>
+            Expertise
           </Link>
         </b>
         <b style={styles.b}>
           <Link to="/" style={styles.link}>
-            Our Services
+            Services
           </Link>
         </b>
         <b style={styles.b}>
-          <Link to="/" style={styles.link}>
-            Contact Us
+          <Link to="/contact" style={styles.link}>
+            Contact
           </Link>
         </b>
       </nav>

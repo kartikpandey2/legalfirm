@@ -1,9 +1,6 @@
 import React, { Component } from "react"
 import Button from "@material-ui/core/Button"
 
-import highCourt from "../images/Delhi-High-Court-logo.png"
-import supremeCourt from "../images/supreme-court.png"
-import districtCourt from "../images/district-court.jpg"
 import background from "../images/close-up-court-courthouse-534204.jpg"
 
 const styles = {
@@ -40,14 +37,17 @@ const styles = {
 class Banner extends Component {
   constructor(props) {
     super(props)
-    this.state = { width: window.innerWidth }
+    this.state = {
+      width: 0,
+    }
   }
 
   componentDidMount() {
+    this.setState({ width: window.innerWidth })
     window.addEventListener("resize", this.handleResize)
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     window.removeEventListener("resize", this.handleResize)
   }
 

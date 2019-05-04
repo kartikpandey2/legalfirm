@@ -26,6 +26,15 @@ const styles = {
     backgroundColor: "#2196F3",
     color: "white",
   },
+  cancelButton: {
+    backgroundColor: "#d9534f",
+    color: "white",
+  },
+  submitButtom: {
+    backgroundColor: "#13CE66",
+    color: "white",
+    marginRight: "0.2rem",
+  },
 }
 
 const ConsultationForm = ({ submit, cancel }) => {
@@ -48,8 +57,12 @@ const ConsultationForm = ({ submit, cancel }) => {
         <Input />
       </div>
       <div>
-        <Button onClick={submit}>Submit</Button>
-        <Button onClick={cancel}>Cancel</Button>
+        <Button onClick={submit} style={styles.submitButtom}>
+          Submit
+        </Button>
+        <Button onClick={cancel} style={styles.cancelButton}>
+          Cancel
+        </Button>
       </div>
     </div>
   )
@@ -69,7 +82,7 @@ class ContactUs extends Component {
     window.addEventListener("resize", this.handleResize)
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     window.removeEventListener("resize", this.handleResize)
   }
 
@@ -89,7 +102,6 @@ class ContactUs extends Component {
 
   render() {
     const { width, showForm } = this.state
-    console.log(width)
     const Consultation = showForm ? (
       <div>
         <h3>Free Consultation</h3>

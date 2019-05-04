@@ -6,11 +6,12 @@ class Footer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      width: window.innerWidth,
+      width: 0,
     }
   }
 
   componentDidMount() {
+    this.setState({ width: window.innerWidth })
     window.addEventListener("resize", this.updateWindowWidth)
   }
 
@@ -25,7 +26,8 @@ class Footer extends Component {
 
   render() {
     const { width } = this.state
-    const ShowFooter = width > 480 ? <DesktopFooter /> : <MobileFooter />
+    const ShowFooter =
+      width > 480 ? <DesktopFooter /> : <MobileFooter page={this.props.page} />
     return ShowFooter
   }
 }

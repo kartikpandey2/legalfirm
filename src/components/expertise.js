@@ -18,7 +18,7 @@ const expertiseLabel = ["test1", "test2", "test3", "test4"]
 
 const Expertise = () => {
   const ExpertiseCard = expertiseLabel.map(label => (
-    <ImageCard image={image} label={label} />
+    <ImageCard image={image} label={label} key={label} />
   ))
   return (
     <section className="odd">

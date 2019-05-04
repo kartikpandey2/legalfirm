@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import supremeCourt from "../images/supreme-court.png"
+import lawyer from "../images/lawyer.png"
 
 const styles = {
   h1: {
@@ -64,11 +64,12 @@ class Team extends Component {
   }
 
   componentDidMount() {
+    this.setState({ width: window.width })
     window.addEventListener("resize", this.handleScreenResize)
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize")
+    window.removeEventListener("resize", this.handleScreenResize)
   }
 
   handleScreenResize = () => {
@@ -82,7 +83,7 @@ class Team extends Component {
       <section className="even">
         <h1 style={styles.h1}>Our Team</h1>
         <div>
-          <Cell image={supremeCourt} name="Kartik" width={width}>
+          <Cell image={lawyer} name="Kartik" width={width}>
             Ullamcorper a lacus vestibulum sed arcu. Malesuada bibendum arcu
             vitae elementum. Enim sed faucibus turpis in eu. Laoreet non
             curabitur gravida arcu ac tortor dignissim. Leo vel fringilla est
@@ -90,7 +91,7 @@ class Team extends Component {
             habitasse. Eleifend mi in nulla posuere sollicitudin aliquam
             ultrices sagittis.
           </Cell>
-          <Cell image={supremeCourt} name="Jyoti" width={width}>
+          <Cell image={lawyer} name="Jyoti" width={width}>
             Ullamcorper a lacus vestibulum sed arcu. Malesuada bibendum arcu
             vitae elementum. Enim sed faucibus turpis in eu. Laoreet non
             curabitur gravida arcu ac tortor dignissim. Leo vel fringilla est

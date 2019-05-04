@@ -11,11 +11,12 @@ export default class Header extends Component {
   }
 
   componentDidMount() {
+    this.setState({ width: window.innerWidth })
     window.addEventListener("resize", this.updateWindowWidth)
   }
 
   componentWillUnmout() {
-    window.removeEventListener("resize")
+    window.removeEventListener("resize", this.updateWindowWidth)
   }
 
   updateWindowWidth = () => {

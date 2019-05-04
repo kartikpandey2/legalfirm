@@ -11,10 +11,9 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
-import Banner from "./banner"
 import "./layout.css"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, page, style }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -28,11 +27,10 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Banner />
-        <div style={{}}>
+        <div style={style}>
           <main>{children}</main>
         </div>
-        <Footer />
+        <Footer page={page} />
       </>
     )}
   />
