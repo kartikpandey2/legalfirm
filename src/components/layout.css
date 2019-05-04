@@ -18,6 +18,7 @@ header,
 main,
 menu,
 nav,
+label,
 section,
 summary {
   display: block;
@@ -61,7 +62,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.67em 0;
 }
 mark {
@@ -218,7 +219,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 h1 {
   margin-left: 0;
@@ -228,13 +229,13 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 2rem;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 h2 {
@@ -615,6 +616,15 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+.even {
+  padding: 2rem 3rem;
+  background-color: #f6f8fa;
+}
+
+.odd {
+  padding: 2rem 3rem;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
