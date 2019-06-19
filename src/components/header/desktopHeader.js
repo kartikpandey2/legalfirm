@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import logo from "../../images/logo.jpeg"
+
 const styles = {
   header: {
     background: `white`,
@@ -13,6 +15,7 @@ const styles = {
     display: "flex",
     padding: `1rem 1.0875rem`,
     justifyContent: "space-between",
+    alignItems: "center",
   },
   b: { margin: "0 1rem 0 0" },
   link: {
@@ -25,6 +28,10 @@ const styles = {
   item2: {
     flex: "1 2 27rem",
   },
+  logo: {
+    width: "40px",
+    height: "40px",
+  },
 }
 
 const DesktopHeader = ({ siteTitle }) => (
@@ -33,7 +40,7 @@ const DesktopHeader = ({ siteTitle }) => (
       <div>
         <b style={styles.b}>
           <Link to="/" style={styles.link}>
-            Logo
+            <img src={logo} alt="logo" style={styles.logo} />
           </Link>
         </b>
       </div>

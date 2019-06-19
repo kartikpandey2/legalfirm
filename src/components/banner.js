@@ -1,7 +1,8 @@
 import React, { Component } from "react"
-import Button from "@material-ui/core/Button"
+import { Button } from "antd"
 
-import background from "../images/close-up-court-courthouse-534204.jpg"
+// import background from "../images/close-up-court-courthouse-534204.jpg"
+import background from "../images/hammer.jpg"
 
 const styles = {
   bannerDefault: {
@@ -11,7 +12,7 @@ const styles = {
     backgroundImage: `url(${background})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "calc(100vh - 3rem)",
+    height: "calc(100vh - 4rem)",
     width: "100%",
   },
   bannerMobile: {
@@ -26,11 +27,20 @@ const styles = {
   },
   row1: {
     position: "absolute",
-    top: "18%",
+    top: "40%",
+    right: "10%",
   },
   row2: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
     position: "absolute",
-    bottom: "20%",
+    top: "40%",
+    right: "4%",
+  },
+  text: {
+    fontSize: "1.4rem",
+    color: "white",
   },
 }
 
@@ -60,11 +70,12 @@ class Banner extends Component {
     const { width } = this.state
     return (
       <div style={width > 480 ? styles.bannerDefault : styles.bannerMobile}>
-        <div style={styles.row1}>
-          <h3>Looking For Legal Advice ?</h3>
-        </div>
+        <div style={styles.row1} />
         <div style={styles.row2}>
-          <button>Call Us</button>
+          <p style={styles.text}>Let Our Experience be Your Guide</p>
+          <Button>
+            <b>Contact Us</b>
+          </Button>
         </div>
       </div>
     )
