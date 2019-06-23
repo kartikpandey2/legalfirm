@@ -72,9 +72,12 @@ class Banner extends Component {
       <div style={width > 480 ? styles.bannerDefault : styles.bannerMobile}>
         <div style={styles.row1} />
         <div style={styles.row2}>
+          <p style={styles.text}>Hi, We are Lotus Legal Associates</p>
           <p style={styles.text}>Let Our Experience be Your Guide</p>
           <Button>
-            <b>Contact Us</b>
+            <a href="tel:+918287634022">
+              <b>Contact Us</b>
+            </a>
           </Button>
         </div>
       </div>

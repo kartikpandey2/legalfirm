@@ -56,8 +56,8 @@ const DesktopHeader = ({ siteTitle }) => (
           </Link>
         </b>
         <b style={styles.b}>
-          <Link to="/" style={styles.link}>
-            Services
+          <Link to="/team" style={styles.link}>
+            Our Team
           </Link>
         </b>
         <b style={styles.b}>

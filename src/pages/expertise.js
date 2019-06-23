@@ -5,10 +5,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Expertise from "../components/expertise"
 
+const styles = {
+  container: {
+    padding: "3% 15%",
+  },
+}
+
 const ExpertisePage = () => (
   <Layout page="expertise">
     <SEO title="Page two" />
-    <Expertise />
+    <div style={styles.container}>
+      <Expertise />
+    </div>
   </Layout>
 )
 

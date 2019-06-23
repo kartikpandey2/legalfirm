@@ -5,10 +5,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ContactUs from "../components/contactUs"
 
+const styles = {
+  container: {
+    padding: "3% 15%",
+  },
+}
+
 const ContacPage = () => (
   <Layout page="contact">
     <SEO title="Page two" />
-    <ContactUs />
+    <div style={styles.container}>
+      <ContactUs />
+    </div>
   </Layout>
 )
 

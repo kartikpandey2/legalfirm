@@ -10,9 +10,6 @@ const styles = {
   extraDetails: {
     marginBottom: "3%",
   },
-  mainContainer: {
-    padding: "3% 15%",
-  },
   consultation: {
     display: "flex",
     justifyContent: "center",
@@ -127,42 +124,41 @@ class ContactUs extends Component {
     return (
       <section style={styles.contactUs} className="even">
         <h1 style={styles.h1}>Contact Us</h1>
-        <div style={styles.mainContainer}>
-          <div
-            style={width > 480 ? styles.container : styles.containerMobileView}
-          >
-            <div>
-              <p style={styles.text}>
-                The Firm is headquartered at New Delhi and has offices in
-                Dehradun. The Firm has associate offices in most major cities of
-                India, therefore enabling the firm to provide its Clients both
-                global and local support.
-              </p>
-            </div>
-            <div>
-              <strong>NEW DELHI</strong>
-              <div>B-504, Plot No. 21,</div>
-              <div>Mayank Mansion, </div>
-              <div>Sector 06, Dwarka</div>
-              <div>New Delhi 10075, India.</div>
-            </div>
-            <div>
-              <strong>DEHRADUN</strong>
-              <div>213, Rajpur Road</div>
-              <div>Opp. G.R.D Academy</div>
-              <div>Dehradun U.K 248009, India</div>
-            </div>
+
+        <div
+          style={width > 480 ? styles.container : styles.containerMobileView}
+        >
+          <div>
+            <p style={styles.text}>
+              The Firm is headquartered at New Delhi and has offices in
+              Dehradun. The Firm has associate offices in most major cities of
+              India, therefore enabling the firm to provide its Clients both
+              global and local support.
+            </p>
           </div>
-          <div style={styles.extraDetails}>
-            <strong>Contact Details:</strong>
-            <span> Ph. +919310856660, +918766315435, +917248546756</span>
+          <div>
+            <strong>NEW DELHI</strong>
+            <div>B-504, Plot No. 21,</div>
+            <div>Mayank Mansion, </div>
+            <div>Sector 06, Dwarka</div>
+            <div>New Delhi 10075, India.</div>
           </div>
-          <div style={styles.extraDetails}>
-            <strong>E-Mail:</strong>
-            <span> lotuslegalassociates@gmail.com</span>
+          <div>
+            <strong>DEHRADUN</strong>
+            <div>213, Rajpur Road</div>
+            <div>Opp. G.R.D Academy</div>
+            <div>Dehradun U.K 248009, India</div>
           </div>
-          <div style={styles.consultation}>{Consultation}</div>
         </div>
+        <div style={styles.extraDetails}>
+          <strong>Contact Details:</strong>
+          <span> Ph. +919310856660, +918766315435, +917248546756</span>
+        </div>
+        <div style={styles.extraDetails}>
+          <strong>E-Mail:</strong>
+          <span> lotuslegalassociates@gmail.com</span>
+        </div>
+        <div style={styles.consultation}>{Consultation}</div>
       </section>
     )
   }

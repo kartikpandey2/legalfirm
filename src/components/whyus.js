@@ -11,9 +11,6 @@ const styles = {
     textOverflow: "ellipsis",
     marginBottom: "3%",
   },
-  container: {
-    padding: "3% 15%",
-  },
 }
 
 const alertMessage1 =
@@ -26,7 +23,7 @@ const WhyUs = () => {
   return (
     <section className="odd">
       <h1 style={styles.h1}>Why Us</h1>
-      <div style={styles.container}>
+      <div>
         <div>
           <Alert message={alertMessage1} type="info" style={styles.text} />
         </div>

@@ -1,5 +1,7 @@
+import { Link } from "gatsby"
 import React from "react"
 import Button from "@material-ui/core/Button"
+import logo from "../../images/logo.jpeg"
 
 const styles = {
   header: {
@@ -16,13 +18,25 @@ const styles = {
     backgroundColor: "#2196F3",
     color: "white",
   },
+  logo: {
+    width: "40px",
+    height: "40px",
+  },
+  link: {
+    color: `Black`,
+    textDecoration: `none`,
+  },
 }
 
 const MobileHeader = () => {
   return (
     <header style={styles.header}>
       <div style={styles.container}>
-        <div>Logo</div>
+        <div>
+          <Link to="/" style={styles.link}>
+            <img src={logo} alt="logo" style={styles.logo} />
+          </Link>
+        </div>
         <div>
           <Button style={styles.button}>Call Us</Button>
         </div>

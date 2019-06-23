@@ -5,10 +5,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import WhyUs from "../components/whyus"
 
+const styles = {
+  container: {
+    padding: "3% 15%",
+  },
+}
+
 const AboutPage = () => (
   <Layout page="about">
     <SEO title="Page two" />
-    <WhyUs />
+    <div style={styles.container}>
+      <WhyUs />
+    </div>
   </Layout>
 )
 

@@ -49,27 +49,29 @@ class MobileFooter extends Component {
   componentDidMount() {
     const { page } = this.props
     const button = document.querySelector(`#${page}`)
-    button.style.color = "rgb(33, 150, 243)"
-    const img = document.querySelector(`#${page} > span > div > img`)
-    switch (page) {
-      case "home":
-        img.src = homeAfterClick
-        break
+    if (button) {
+      button.style.color = "rgb(33, 150, 243)"
+      const img = document.querySelector(`#${page} > span > div > img`)
+      switch (page) {
+        case "home":
+          img.src = homeAfterClick
+          break
 
-      case "about":
-        img.src = aboutAfterClick
-        break
+        case "about":
+          img.src = aboutAfterClick
+          break
 
-      case "expertise":
-        img.src = expertiseAfterClick
-        break
+        case "expertise":
+          img.src = expertiseAfterClick
+          break
 
-      case "contact":
-        img.src = contactAfterClick
-        break
+        case "contact":
+          img.src = contactAfterClick
+          break
 
-      default:
-        img.src = null
+        default:
+          img.src = null
+      }
     }
   }
 
