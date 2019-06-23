@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import { Button } from "antd"
 
-// import background from "../images/close-up-court-courthouse-534204.jpg"
 import background from "../images/hammer.jpg"
+import backgroundMobile from "../images/hammerResized.jpg"
 
 const styles = {
   bannerDefault: {
@@ -19,18 +19,21 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundImage: `url(${background})`,
+    backgroundImage: `url(${backgroundMobile})`,
     backgroundSize: "cover",
     backgroundPositionX: "-4rem",
     backgroundRepeat: "no-repeat",
     height: "calc(100vh - 7.8rem)",
   },
-  row1: {
+  row1Mobile: {
     position: "absolute",
     top: "40%",
-    right: "10%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  row2: {
+  row1: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -70,8 +73,7 @@ class Banner extends Component {
     const { width } = this.state
     return (
       <div style={width > 480 ? styles.bannerDefault : styles.bannerMobile}>
-        <div style={styles.row1} />
-        <div style={styles.row2}>
+        <div style={width > 480 ? styles.row1 : styles.row1Mobile}>
           <p style={styles.text}>Hi, We are Lotus Legal Associates</p>
           <p style={styles.text}>Let Our Experience be Your Guide</p>
           <Button>

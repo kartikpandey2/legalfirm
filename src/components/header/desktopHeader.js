@@ -41,6 +41,7 @@ const DesktopHeader = ({ siteTitle }) => (
         <b style={styles.b}>
           <Link to="/" style={styles.link}>
             <img src={logo} alt="logo" style={styles.logo} />
+            &nbsp; Lotus Legal
           </Link>
         </b>
       </div>

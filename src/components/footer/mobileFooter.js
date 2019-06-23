@@ -5,7 +5,7 @@ import { withStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
 
 import contact from "../../images/call.svg"
-// import service from "../../images/deal.svg"
+import team from "../../images/team.svg"
 import home from "../../images/home.svg"
 import expertise from "../../images/lawyer.svg"
 import about from "../../images/file.svg"
@@ -13,6 +13,7 @@ import aboutAfterClick from "../../images/fileAfterClick.svg"
 import expertiseAfterClick from "../../images/lawyerAfterClick.svg"
 import contactAfterClick from "../../images/callAfterClick.svg"
 import homeAfterClick from "../../images/homeAfterClick.svg"
+import teamAfterClick from "../../images/teamAfterClick.svg"
 
 const styles = {
   footer: {
@@ -21,9 +22,10 @@ const styles = {
     bottom: 0,
     backgroundColor: "white",
     width: "100%",
+    maxHeight: "80px",
   },
   container: {
-    padding: "0.5rem 1rem",
+    padding: "0.5rem 0.5rem",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -32,10 +34,9 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    justifyContent: "center",
   },
   image: {
-    position: "relative",
-    right: "1rem",
     maxHeight: "1.5em",
     maxWidth: "2rem",
   },
@@ -67,6 +68,10 @@ class MobileFooter extends Component {
 
         case "contact":
           img.src = contactAfterClick
+          break
+
+        case "team":
+          img.src = teamAfterClick
           break
 
         default:
@@ -101,6 +106,14 @@ class MobileFooter extends Component {
               <div className={classes.items}>
                 <img src={expertise} className={classes.image} />
                 <label>Expertise</label>
+              </div>
+            </Button>
+          </Link>
+          <Link to="/team">
+            <Button id="team">
+              <div className={classes.items}>
+                <img src={team} className={classes.image} />
+                <label>Team</label>
               </div>
             </Button>
           </Link>

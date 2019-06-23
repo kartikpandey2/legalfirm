@@ -32,7 +32,8 @@ const styles = {
   containerMobileView: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: "3%",
   },
   inputContainer: {
     marginBottom: "1rem",
@@ -142,21 +143,28 @@ class ContactUs extends Component {
             <div>Mayank Mansion, </div>
             <div>Sector 06, Dwarka</div>
             <div>New Delhi 10075, India.</div>
+            <br />
           </div>
           <div>
             <strong>DEHRADUN</strong>
             <div>213, Rajpur Road</div>
             <div>Opp. G.R.D Academy</div>
             <div>Dehradun U.K 248009, India</div>
+            <br />
           </div>
         </div>
         <div style={styles.extraDetails}>
-          <strong>Contact Details:</strong>
-          <span> Ph. +919310856660, +918766315435, +917248546756</span>
+          <div>
+            <strong>Contact Details:</strong> Ph. +919310856660, +918766315435,
+            +917248546756
+          </div>
+          <br />
         </div>
         <div style={styles.extraDetails}>
-          <strong>E-Mail:</strong>
-          <span> lotuslegalassociates@gmail.com</span>
+          <div>
+            <strong>E-Mail:</strong> lotuslegalassociates@gmail.com
+          </div>
+          <br />
         </div>
         <div style={styles.consultation}>{Consultation}</div>
       </section>

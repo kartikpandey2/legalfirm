@@ -7,7 +7,7 @@ import ContactUs from "../components/contactUs"
 
 const styles = {
   container: {
-    padding: "3% 15%",
+    padding: "3% 15% 80px",
   },
 }
 

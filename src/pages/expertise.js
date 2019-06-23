@@ -7,7 +7,7 @@ import Expertise from "../components/expertise"
 
 const styles = {
   container: {
-    padding: "3% 15%",
+    padding: "3% 15% 80px",
   },
 }
 

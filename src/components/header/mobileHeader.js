@@ -35,10 +35,13 @@ const MobileHeader = () => {
         <div>
           <Link to="/" style={styles.link}>
             <img src={logo} alt="logo" style={styles.logo} />
+            &nbsp;<b>Lotus Legal</b>
           </Link>
         </div>
         <div>
-          <Button style={styles.button}>Call Us</Button>
+          <a href="tel:+918287634022">
+            <Button style={styles.button}>Call Us</Button>
+          </a>
         </div>
       </div>
     </header>

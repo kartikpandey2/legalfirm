@@ -7,7 +7,7 @@ import WhyUs from "../components/whyus"
 
 const styles = {
   container: {
-    padding: "3% 15%",
+    padding: "3% 15% 80px",
   },
 }
 
