@@ -8,24 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import appleFavicon from "../images/apple-icon-180x180.png"
+import androidFavicon from "../images/android-icon-192x192.png"
+import webFavicon1 from "../images/favicon-32x32.png"
+import webFavicon2 from "../images/favicon-96x96.png"
+import webFavicon3 from "../images/favicon-16x16.png"
 
 function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description
 
   return (
     <Helmet
@@ -33,7 +23,38 @@ function SEO({ description, lang, meta, keywords, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | Lotus Legal Associates`}
+      link={[
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: appleFavicon,
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "192x192",
+          href: androidFavicon,
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: webFavicon1,
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "96x96",
+          href: webFavicon2,
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: webFavicon3,
+        },
+      ]}
       meta={[
         {
           name: `description`,
@@ -42,30 +63,6 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           property: `og:title`,
           content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
         },
       ]
         .concat(

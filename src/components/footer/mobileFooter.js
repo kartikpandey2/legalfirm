@@ -88,7 +88,7 @@ class MobileFooter extends Component {
           <Link to="/">
             <Button id="home">
               <div className={classes.items}>
-                <img src={home} className={classes.image} />
+                <img src={home} className={classes.image} alt="home" />
                 <label>Home</label>
               </div>
             </Button>
@@ -96,7 +96,7 @@ class MobileFooter extends Component {
           <Link to="/about">
             <Button id="about">
               <div className={classes.items}>
-                <img src={about} className={classes.image} />
+                <img src={about} className={classes.image} alt="about" />
                 <label>About</label>
               </div>
             </Button>
@@ -104,7 +104,11 @@ class MobileFooter extends Component {
           <Link to="expertise">
             <Button id="expertise">
               <div className={classes.items}>
-                <img src={expertise} className={classes.image} />
+                <img
+                  src={expertise}
+                  className={classes.image}
+                  alt="expertise"
+                />
                 <label>Expertise</label>
               </div>
             </Button>
@@ -112,7 +116,7 @@ class MobileFooter extends Component {
           <Link to="/team">
             <Button id="team">
               <div className={classes.items}>
-                <img src={team} className={classes.image} />
+                <img src={team} className={classes.image} alt="team" />
                 <label>Team</label>
               </div>
             </Button>
@@ -120,7 +124,7 @@ class MobileFooter extends Component {
           <Link to="/contact">
             <Button id="contact">
               <div className={classes.items}>
-                <img src={contact} className={classes.image} />
+                <img src={contact} className={classes.image} alt="contact" />
                 <label>Contact</label>
               </div>
             </Button>

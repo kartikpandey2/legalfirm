@@ -30,7 +30,10 @@ class IndexPage extends Component {
     )
     return (
       <Layout page="home">
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO
+          title="Home"
+          keywords={[`Lotus Legal`, `Legal Firm`, `associates`]}
+        />
         {modal ? (
           <Modal
             title="Disclamer"

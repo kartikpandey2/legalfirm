@@ -6,13 +6,21 @@ import Team from "../components/team"
 
 const styles = {
   container: {
-    padding: "3% 15%",
+    padding: "3% 15% 100px",
   },
 }
 
 const TeamPage = () => (
   <Layout page="team">
-    <SEO title="Page two" />
+    <SEO
+      title="Team"
+      keywords={[
+        `Lotus Legal`,
+        `Lotus Legal Team`,
+        `Legal Firm Team`,
+        `contact`,
+      ]}
+    />
     <div style={styles.container}>
       <Team />
     </div>

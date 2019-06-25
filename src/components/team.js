@@ -1,10 +1,12 @@
 import React, { Component } from "react"
 
-import lawyer from "../images/lawyer.png"
+import AvaniMalik from "../images/AvaniMalik.jpeg"
+import BhuvanChadha from "../images/BhuvanChadha.jpeg"
 
 const styles = {
   h1: {
     textAlign: "Center",
+    marginBottom: "5%",
   },
   articleMobileView: {
     display: "flex",
@@ -14,20 +16,22 @@ const styles = {
   },
   articleDefaultView: {
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
   },
   imageContainerMobileView: {
-    flexBasis: "100%",
+    maxWidth: "200px",
+    maxHeight: "200px",
   },
   imageContainerDefaultView: {
-    flexBasis: "40%",
+    maxWidth: "200px",
+    marginBottom: "3%",
   },
   textContainerMobileView: {
     flexBasis: "100%",
   },
   textContainerDefaultView: {
-    flexBasis: "50%",
+    marginBottom: "5%",
   },
   name: {
     color: "#009eeb",
@@ -36,23 +40,21 @@ const styles = {
     color: "#02b875",
     marginBottom: "0.2em",
   },
+  image: {
+    width: "100%",
+    height: "100%",
+  },
 }
 
 const Cell = ({ image, children, name, width, degree, position }) => {
-  const articleStyle =
-    width > 480 ? styles.articleDefaultView : styles.articleMobileView
-  const imageContainer =
-    width > 480
-      ? styles.imageContainerDefaultView
-      : styles.imageContainerMobileView
-  const textContainer =
-    width > 480
-      ? styles.textContainerDefaultView
-      : styles.textContainerMobileView
+  const articleStyle = styles.articleDefaultView
+  const imageContainer = styles.imageContainerDefaultView
+  const textContainer = styles.textContainerDefaultView
+
   return (
     <article style={articleStyle}>
       <div style={imageContainer}>
-        <img src={image} />
+        <img src={image} style={styles.image} alt={name} />
       </div>
       <div style={textContainer}>
         <h3 style={styles.name}>{name}</h3>
@@ -73,7 +75,7 @@ class Team extends Component {
   }
 
   componentDidMount() {
-    this.setState({ width: window.width })
+    this.setState({ width: window.innerWidth })
     window.addEventListener("resize", this.handleScreenResize)
   }
 
@@ -93,7 +95,7 @@ class Team extends Component {
         <h1 style={styles.h1}>Our Team</h1>
         <div>
           <Cell
-            image={lawyer}
+            image={AvaniMalik}
             name="AVANI MALIK"
             width={width}
             degree={`B.A. LLB (H), LLM`}
@@ -125,7 +127,7 @@ class Team extends Component {
             of India.
           </Cell>
           <Cell
-            image={lawyer}
+            image={BhuvanChadha}
             name="BHUVAN CHADHA"
             width={width}
             degree={`B.A. LLB (H), LLM`}

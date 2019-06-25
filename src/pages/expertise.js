@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,7 +12,15 @@ const styles = {
 
 const ExpertisePage = () => (
   <Layout page="expertise">
-    <SEO title="Page two" />
+    <SEO
+      title="Expertise"
+      keywords={[
+        `Lotus Legal`,
+        `Lotus Legal expertise`,
+        `Legal Firm expertise`,
+        `contact`,
+      ]}
+    />
     <div style={styles.container}>
       <Expertise />
     </div>

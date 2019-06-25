@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,7 +12,7 @@ const styles = {
 
 const AboutPage = () => (
   <Layout page="about">
-    <SEO title="Page two" />
+    <SEO title="About" />
     <div style={styles.container}>
       <WhyUs />
     </div>

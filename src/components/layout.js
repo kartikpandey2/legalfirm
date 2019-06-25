@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useState } from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -27,7 +26,7 @@ const Layout = ({ children, page, style }) => {
       `}
       render={data => (
         <>
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header siteTitle={page} />
           <div style={style}>
             <main>{children}</main>
           </div>

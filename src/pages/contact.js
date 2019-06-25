@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,7 +12,15 @@ const styles = {
 
 const ContacPage = () => (
   <Layout page="contact">
-    <SEO title="Page two" />
+    <SEO
+      title="Contact"
+      keywords={[
+        `Lotus Legal`,
+        `Lotus Legal contact`,
+        `Legal Firm contact`,
+        `contact`,
+      ]}
+    />
     <div style={styles.container}>
       <ContactUs />
     </div>
